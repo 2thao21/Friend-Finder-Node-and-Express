@@ -9,28 +9,37 @@ module.exports = function(app){
     });
 
     app.post("/api/friends", function(request, result){
-        var difference = 25;
-        var matchScore = 0;
+        console.log(request.body.scores);
 
-        for(var i = friendsData.length -1; i >= 0; i--){
-            console.log("Comparing with" + friendsData[i].name);
-
-            var totalDifference = 0;
-
-            for(var f = 0; f < 10; f++){
-                totalDifference = totalDifference + Math.abs(friendsData[i].score[f] - request.body.score[f]);
-            }
-            if (totalDifference < difference){
-                difference = totalDifference
-                matchScore = i;
-            }
-            console.log("Total difference: " + friendsData[i].name + " is " + totalDifference);
+        var user = request.body;
+        
+        for(var i = 0; i < user.scores.length; i++){
+            user.scores[i] = parseInt(user.scores[i]);
         }
 
+        var minimumDifference = 25;
+        var matchScore = 0;
+
+        // looping to compare the user and the ith friend scores
+        // also adding the difference(abs) to the total difference 
+        for (var i = 0; i < friendsData.length; i++){
+            var totalDifference = 0;
+            for(var f = 0; f < friends[i].scores.length; f++){
+                var difference = Math.abs(user.score[f] - friendsData[i].scores[f]);
+                totalDifference += difference;
+            }
+
+            if (totalDifference < minimumDifference){
+                matchScore = i;
+                minimumDifference = totalDifference;
+            }
+        }
+        
+
 // pushing the user input into the friendArr
-        friendsData.push(request.body);
+        friendsData.push(user);
 
 // response back with the most compatible
-result.json({name: friendsData[matchScore].name, photo: friendsData[matchScore].photo});
+result.json(friendsData[matchScore]);
     });
 }
