@@ -23,7 +23,7 @@
     <div class="container">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title"> Complete qustions to find Compatibility!</h3>
+                <h3 class="panel-title"> Complete questions to find Compatibility!</h3>
             </div>
         </div>
         <div class="panel-body">
@@ -175,11 +175,11 @@
 
 <!-- Modal -->
 <div class="modal fade" id="friendsModal" role="dialog">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h3 class="modal-title">Best Match</h3>
-                <button type="button" class="close" data-dismm="modal" aria-label="Close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -188,7 +188,7 @@
                 <img id="matchImage" src="" alt="">
             </div>
             <div>
-                <button type="button" class="btn btn-secondary" data-dismm="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
@@ -197,7 +197,7 @@
     <footer>
         <div>
             <p>
-                <a href = "/api/friends">API Friends List</a>
+                <a href = "/api/friends">API Friends List</a> || <a href="https://github.com/2thao21/Friend-Finder-Node-and-Express">GitHub Repo</a>
             </p>
         </div>
     </footer>
@@ -206,19 +206,22 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript">
 
-        //
+        //Form validation
         $("#submit").on("click", function(){
 
             function validateForm(){
                 var isValid = true;
                 $(".form-control").each(function(){
-                    if($(this).val()=== "")
+                    if($(this).val()=== ""){
                     isValid = false;
+                    }
                 });
                 return isValid;
             }
-
+            // if required fields are completed
             if (validateForm() === true){
+
+                // create an object for the user's data
                 var userData = {
                     name: $("#name").val(),
                     photo: $("#photo").val(),
@@ -226,15 +229,16 @@
                 }
                 console.log(userData);
             
-
+            // grab the URL of the website
             var currentURL = window.location.origin;
-
+            
+            // AJAX post the data to the friends API
             $post(currentURL + "/api/friends", userData, function(data){
 
                 $("#matchName").text(data.name);
                 $("#matchImage").attr("src", data.photo);
 
-                $("#friendModal").modal("show");
+                $("#friendsModal").modal("toggle");
             });
             
         }
