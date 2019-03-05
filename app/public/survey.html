@@ -1,0 +1,249 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friend Finder</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron" class="text-center">
+          <h1 class="text-center">Asking the Questions</h1>
+          
+          <div class="text-center">
+            <a href="/home"><button class="btn btn-success btn-lg"><span class="fa fa-credit-card"></span> Home</button></a>
+          </div>
+        </div> 
+    </div>
+    
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"> Complete qustions to find Compatibility!</h3>
+            </div>
+        </div>
+        <div class="panel-body">
+            <form>
+                <div class="form-group">
+                    <label>Name (Required)</label>
+                    <input type="text" class="form-control" id="name" required="">
+                </div>
+
+                <div class="form-group">
+                    <label>Link to photo image</label>
+                    <input type="text" class="form-control" id="photo" required="">
+                </div>
+
+                <div class="form-group">
+                    <h3>Question 1</h3>
+                        <h5>Do you enjoy reading?</h5>
+                    <select class="form-control" id="q1" style="width: 200px">
+                        <option value=""></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <h3>Question 2</h3>
+                        <h5>Do you enjoy exercising?</h5>
+                    <select class="form-control" id="q2" style="width: 200px">
+                        <option value=""></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <h3>Question 3</h3>
+                        <h5>Do you enjoy cooking?</h5>
+                    <select class="form-control" id="q3" style="width: 200px">
+                        <option value=""></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <h3>Question 4</h3>
+                        <h5>Do you enjoy winters?</h5>
+                    <select class="form-control" id="q4" style="width: 200px">
+                        <option value=""></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <h3>Question 5</h3>
+                        <h5>Do you enjoy traveling?</h5>
+                    <select class="form-control" id="q5" style="width: 200px">
+                        <option value=""></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <h3>Question 6</h3>
+                        <h5>Do you enjoy gaming?</h5>
+                    <select class="form-control" id="q6" style="width: 200px">
+                        <option value=""></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <h3>Question 7</h3>
+                        <h5>Do you like cats?</h5>
+                    <select class="form-control" id="q7" style="width: 200px">
+                        <option value=""></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <h3>Question 8</h3>
+                        <h5>Do you like dogs?</h5>
+                    <select class="form-control" id="q8" style="width: 200px">
+                        <option value=""></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <h3>Question 9</h3>
+                        <h5>Do you enjoy instrumental music?</h5>
+                    <select class="form-control" id="q9" style="width: 200px">
+                        <option value=""></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <h3>Question 10</h3>
+                        <h5>Do you enjoy web development?</h5>
+                    <select class="form-control" id="q10" style="width: 200px">
+                        <option value=""></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit" style="width: 200px">Submit</button>
+            </form>
+        </div>
+    </div>
+
+<!-- Modal -->
+<div class="modal fade" id="friendsModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Best Match</h3>
+                <button type="button" class="close" data-dismm="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h2 id="matchName"></h2>
+                <img id="matchImage" src="" alt="">
+            </div>
+            <div>
+                <button type="button" class="btn btn-secondary" data-dismm="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <footer>
+        <div>
+            <p>
+                <a href = "/api/friends">API Friends List</a>
+            </p>
+        </div>
+    </footer>
+    
+    <!-- <script></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+
+        //
+        $("#submit").on("click", function(){
+
+            function validateForm(){
+                var isValid = true;
+                $(".form-control").each(function(){
+                    if($(this).val()=== "")
+                    isValid = false;
+                });
+                return isValid;
+            }
+
+            if (validateForm() === true){
+                var userData = {
+                    name: $("#name").val(),
+                    photo: $("#photo").val(),
+                    scores:[$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val()]
+                }
+                console.log(userData);
+            
+
+            var currentURL = window.location.origin;
+
+            $post(currentURL + "/api/friends", userData, function(data){
+
+                $("#matchName").text(data.name);
+                $("#matchImage").attr("src", data.photo);
+
+                $("#friendModal").modal("show");
+            });
+            
+        }
+            else{
+                alert("Please answer all questions before submitting");
+            }
+            return false;
+        });
+
+    </script>
+</body>
+</html>
